@@ -1,0 +1,26 @@
+<div class="form">
+  <form action="{{action}}" method="{{method}}" class="form__container">
+    <h2 class="form__title">{{title}}</h2>
+
+    <fieldset class="form__fieldset">
+      {{#each fields}}
+      <div class="form__field-group">
+        <label for="{{id}}" class="form__label">{{labelText}}</label>
+        <input 
+            class="form__input"
+            type="{{type}}" 
+            id="{{id}}" 
+            name="{{name}}" 
+            placeholder="{{placeholderText}}" 
+            {{#if required}}required{{/if}}>
+      </div>
+      {{/each}}
+
+    </fieldset>
+    <div class="form__btns-container">
+      <button type="submit" class="form__submit-btn">{{submitText}}</button>
+      <button type="button" class="form__alternative-btn">{{alternativeBtnText}}</button>
+    </div>
+    
+  </form>
+</div>
