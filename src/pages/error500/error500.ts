@@ -1,7 +1,7 @@
 import templateSource from '../../partials/error500-page.hbs?raw';
 import cssText from './error500.css?raw';
 import Handlebars from 'handlebars';
-import '../../components/error-component/error-component.ts';
+import '../../components/app-error/app-error.ts';
 
 const template = Handlebars.compile(templateSource);
 

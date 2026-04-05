@@ -1,16 +1,16 @@
 import Handlebars from "handlebars";
-import templateSource from "../../partials/error-component.hbs?raw";
-import cssText from "./error-component.css?raw";
+import templateSource from "../../partials/app-error.hbs?raw";
+import cssText from "./app-error.css?raw";
 
 const template = Handlebars.compile(templateSource);
 
-type ErrorComponentConfig = {
+type AppErrorConfig = {
     title: string;
     message: string;
     buttonText: string;
 }
 
-class ErrorComponent extends HTMLElement {
+class AppError extends HTMLElement {
     shadow: ShadowRoot;
 
     constructor() {
@@ -23,7 +23,7 @@ class ErrorComponent extends HTMLElement {
     }
 
     private render() {
-        const config: ErrorComponentConfig = {
+        const config: AppErrorConfig = {
             title: this.getAttribute('title') || 'Error',
             message: this.getAttribute('message') || 'Ocurrió un error.',
             buttonText: this.getAttribute('button-text') || 'Volver'
@@ -31,4 +31,5 @@ class ErrorComponent extends HTMLElement {
         this.shadow.innerHTML = "<style>" + cssText + "</style>" + template(config);
     }
 }
-customElements.define("error-component", ErrorComponent);
+customElements.define("app-error", AppError);
+

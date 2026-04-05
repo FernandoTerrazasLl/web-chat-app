@@ -1,10 +1,10 @@
 import Handlebars from "handlebars";
-import templateSource from "../../partials/form-component.hbs?raw";
-import cssText from "./form-component.css?raw";
+import templateSource from "../../partials/app-form.hbs?raw";
+import cssText from "./app-form.css?raw";
 
 const template = Handlebars.compile(templateSource);
 
-interface Field {
+type Field = {
     id: string;
     labelText: string;
     type: string;
@@ -13,7 +13,7 @@ interface Field {
     required: boolean;
 }
 
-interface FormConfig {
+type AppFormConfig = {
     action: string;
     method: string;
     title: string;
@@ -22,7 +22,7 @@ interface FormConfig {
     fields: Field[];
 }
 
-class FormComponent extends HTMLElement {
+class AppForm extends HTMLElement {
     shadow: ShadowRoot;
 
     constructor() {
@@ -35,7 +35,7 @@ class FormComponent extends HTMLElement {
     }
 
     private render() {
-        const config: FormConfig = {
+        const config: AppFormConfig = {
             action: this.getAttribute('action') || '/submit',
             method: this.getAttribute('method') || 'post',
             title: this.getAttribute('title') || 'Formulario',
@@ -45,10 +45,10 @@ class FormComponent extends HTMLElement {
         };
         this.shadow.innerHTML = "<style>" + cssText + "</style>" + template(config);
 
-        this.alterantiveEvent();
+        this.alternativeEvent();
     }
 
-    private alterantiveEvent(){
+    private alternativeEvent() {
         const altBtn = this.shadow.querySelector('.form__alternative-btn');
         if (altBtn) {
             altBtn.addEventListener('click', () => {
@@ -57,5 +57,5 @@ class FormComponent extends HTMLElement {
         }
     }
 }
-customElements.define("form-component", FormComponent);
+customElements.define("app-form", AppForm);
 

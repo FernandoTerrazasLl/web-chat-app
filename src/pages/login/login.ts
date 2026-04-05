@@ -1,7 +1,7 @@
 import templateSource from '../../partials/login-page.hbs?raw';
 import cssText from './login.css?raw';
 import Handlebars from 'handlebars';
-import '../../components/form-component/form-component.ts';
+import '../../components/app-form/app-form.ts';
 import { Router } from '../../services/routing.ts';
 
 const template = Handlebars.compile(templateSource);
