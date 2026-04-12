@@ -3,7 +3,7 @@ import templateSource from './chat-input-bar.hbs?raw';
 import cssText from './chat-input-bar.css?raw';
 import sendIcon from '../../images/send-icon.svg';
 import '../chat-attachment-btn/chat-attachment-btn.ts';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 

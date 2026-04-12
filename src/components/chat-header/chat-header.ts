@@ -3,7 +3,7 @@ import templateSource from './chat-header.hbs?raw';
 import cssText from './chat-header.css?raw';
 import '../header-profile/header-profile.ts';
 import '../settings-btn/settings-btn.ts';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 

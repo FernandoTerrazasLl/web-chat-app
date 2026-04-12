@@ -2,7 +2,7 @@ import Handlebars from 'handlebars';
 import templateSource from './search-bar.hbs?raw';
 import cssText from './search-bar.css?raw';
 import searchIcon from '../../images/search-icon.svg';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 

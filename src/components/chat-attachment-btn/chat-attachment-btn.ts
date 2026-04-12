@@ -5,7 +5,7 @@ import clipIcon from '../../images/clip-icon.svg';
 import ubicationIcon from '../../images/ubication-icon.svg';
 import fileIcon from '../../images/file-icon.svg';
 import fotoIcon from '../../images/foto-icon.svg';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 

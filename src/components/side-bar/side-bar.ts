@@ -3,7 +3,7 @@ import templateSource from './side-bar.hbs?raw';
 import cssText from './side-bar.css?raw';
 import '../search-bar/search-bar.ts';
 import '../chat-list/chat-list.ts';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 

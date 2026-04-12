@@ -2,7 +2,7 @@ import Handlebars from 'handlebars';
 import templateSource from './chat-list.hbs?raw';
 import cssText from './chat-list.css?raw';
 import '../chat-item/chat-item.ts';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 

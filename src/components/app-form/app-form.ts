@@ -1,7 +1,7 @@
 import Handlebars from "handlebars";
 import templateSource from "./app-form.hbs?raw";
 import cssText from "./app-form.css?raw";
-import { Block } from "../block.ts";
+import { Block } from "../../services/block.ts";
 
 const template = Handlebars.compile(templateSource);
 

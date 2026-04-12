@@ -4,7 +4,7 @@ import cssText from './settings-btn.css?raw';
 import optionsIcon from '../../images/options-icon.svg';
 import addIcon from '../../images/add-icon.svg';
 import deleteIcon from '../../images/delete-icon.svg';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 

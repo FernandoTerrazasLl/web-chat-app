@@ -3,10 +3,11 @@ import cssText from './register.css?raw';
 import Handlebars from 'handlebars';
 import '../../components/app-form/app-form.ts';
 import { Router } from '../../services/routing.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 
-class RegisterPage extends HTMLElement {
+class RegisterPage extends Block {
     shadow: ShadowRoot;
 
     constructor() {

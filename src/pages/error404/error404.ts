@@ -2,10 +2,11 @@ import templateSource from './error404.hbs?raw';
 import cssText from './error404.css?raw';
 import Handlebars from 'handlebars';
 import '../../components/app-error/app-error.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 
-class Error404Page extends HTMLElement {
+class Error404Page extends Block {
     shadow: ShadowRoot;
 
     constructor() {

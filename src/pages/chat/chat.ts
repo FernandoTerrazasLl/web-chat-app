@@ -5,6 +5,7 @@ import '../../components/side-bar/side-bar.ts';
 import '../../components/chat-view/chat-view.ts';
 import profileImageDefault from '../../images/profile-image-default.svg';
 import randomImage from '../../images/random-image.svg';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 
@@ -49,7 +50,7 @@ type ActiveChat = {
 	messages: Message[];
 };
 
-class ChatPage extends HTMLElement {
+class ChatPage extends Block {
 	shadow: ShadowRoot;
 	chats: Chat[];
 	selectedChatId: number | null;
@@ -219,7 +220,7 @@ class ChatPage extends HTMLElement {
 		return `${hours}:${minutes}`;
 	}
 
-	private render() {
+	render() {
 		const filteredChats = this.getFilteredChats();
 		const chatPreviews: ChatPreview[] = filteredChats.map((chat) => ({
 			id: chat.id,
@@ -245,7 +246,7 @@ class ChatPage extends HTMLElement {
 		this.shadow.innerHTML = '<style>' + cssText + '</style>' + template(config);
 	}
 
-	private setupEventListeners() {
+	setupEventListeners() {
 		if (this.hasListeners) return;
 
 		this.addEventListener('search-change', (event) => {

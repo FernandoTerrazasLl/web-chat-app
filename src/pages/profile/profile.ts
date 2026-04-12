@@ -1,10 +1,11 @@
 import templateSource from './profile.hbs?raw';
 import cssText from './profile.css?raw';
 import Handlebars from 'handlebars';
+import { Block } from '../../services/block';
 
 const template = Handlebars.compile(templateSource);
 
-class ProfilePage extends HTMLElement {
+class ProfilePage extends Block {
 	shadow: ShadowRoot;
 
 	constructor() {
@@ -16,7 +17,7 @@ class ProfilePage extends HTMLElement {
 		this.render();
 	}
 
-	private render() {
+	render() {
 		const config = {
 			title: 'Perfil',
 			subtitle: 'Aqui podras editar tus datos.',

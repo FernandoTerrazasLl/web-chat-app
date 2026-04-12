@@ -3,10 +3,11 @@ import cssText from './login.css?raw';
 import Handlebars from 'handlebars';
 import '../../components/app-form/app-form.ts';
 import { Router } from '../../services/routing.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 
-class LoginPage extends HTMLElement {
+class LoginPage extends Block {
     shadow: ShadowRoot;
 
     constructor() {

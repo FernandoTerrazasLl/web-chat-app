@@ -1,7 +1,7 @@
 import Handlebars from 'handlebars';
 import templateSource from './message-item.hbs?raw';
 import cssText from './message-item.css?raw';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 

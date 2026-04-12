@@ -2,7 +2,7 @@ import Handlebars from 'handlebars';
 import templateSource from './message-list.hbs?raw';
 import cssText from './message-list.css?raw';
 import '../message-item/message-item.ts';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 

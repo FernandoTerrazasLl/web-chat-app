@@ -5,7 +5,7 @@ import emptyIcon from '../../images/messajes-icon.svg';
 import '../chat-header/chat-header.ts';
 import '../message-list/message-list.ts';
 import '../chat-input-bar/chat-input-bar.ts';
-import { Block } from '../block.ts';
+import { Block } from '../../services/block.ts';
 
 const template = Handlebars.compile(templateSource);
 
