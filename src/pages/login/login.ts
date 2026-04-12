@@ -8,11 +8,9 @@ import { Block } from '../../services/block.ts';
 const template = Handlebars.compile(templateSource);
 
 class LoginPage extends Block {
-    shadow: ShadowRoot;
 
     constructor() {
         super();
-        this.shadow = this.attachShadow({ mode: "open" });
     }
 
     connectedCallback() {

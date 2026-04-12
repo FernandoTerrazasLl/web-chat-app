@@ -6,11 +6,9 @@ import { Block } from '../../services/block';
 const template = Handlebars.compile(templateSource);
 
 class ProfilePage extends Block {
-	shadow: ShadowRoot;
 
 	constructor() {
 		super();
-		this.shadow = this.attachShadow({ mode: 'open' });
 	}
 
 	connectedCallback() {

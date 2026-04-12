@@ -51,7 +51,6 @@ type ActiveChat = {
 };
 
 class ChatPage extends Block {
-	shadow: ShadowRoot;
 	chats: Chat[];
 	selectedChatId: number | null;
 	searchQuery: string;
@@ -60,7 +59,6 @@ class ChatPage extends Block {
 
 	constructor() {
 		super();
-		this.shadow = this.attachShadow({ mode: 'open' });
 		this.chats = this.getInitialChats();
 		this.selectedChatId = null;
 		this.searchQuery = '';

@@ -7,11 +7,9 @@ import { Block } from '../../services/block.ts';
 const template = Handlebars.compile(templateSource);
 
 class Error404Page extends Block {
-    shadow: ShadowRoot;
 
     constructor() {
         super();
-        this.shadow = this.attachShadow({ mode: "open" });
     }
 
     connectedCallback() {
