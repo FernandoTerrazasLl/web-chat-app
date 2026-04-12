@@ -1,0 +1,30 @@
+import templateSource from './profile.hbs?raw';
+import cssText from './profile.css?raw';
+import Handlebars from 'handlebars';
+
+const template = Handlebars.compile(templateSource);
+
+class ProfilePage extends HTMLElement {
+	shadow: ShadowRoot;
+
+	constructor() {
+		super();
+		this.shadow = this.attachShadow({ mode: 'open' });
+	}
+
+	connectedCallback() {
+		this.render();
+	}
+
+	private render() {
+		const config = {
+			title: 'Perfil',
+			subtitle: 'Aqui podras editar tus datos.',
+			buttonText: 'Volver al chat'
+		};
+
+		this.shadow.innerHTML = '<style>' + cssText + '</style>' + template(config);
+	}
+}
+
+customElements.define('profile-page', ProfilePage);

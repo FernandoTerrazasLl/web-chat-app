@@ -1,6 +1,7 @@
 import Handlebars from "handlebars";
-import templateSource from "../../partials/app-form.hbs?raw";
+import templateSource from "./app-form.hbs?raw";
 import cssText from "./app-form.css?raw";
+import { Block } from "../block.ts";
 
 const template = Handlebars.compile(templateSource);
 
@@ -22,19 +23,9 @@ type AppFormConfig = {
     fields: Field[];
 }
 
-class AppForm extends HTMLElement {
-    shadow: ShadowRoot;
+class AppForm extends Block {
 
-    constructor() {
-        super();
-        this.shadow = this.attachShadow({ mode: "open" });
-    }
-
-    connectedCallback() {
-        this.render();
-    }
-
-    private render() {
+    protected render() {
         const config: AppFormConfig = {
             action: this.getAttribute('action') || '/submit',
             method: this.getAttribute('method') || 'post',
@@ -58,4 +49,3 @@ class AppForm extends HTMLElement {
     }
 }
 customElements.define("app-form", AppForm);
-

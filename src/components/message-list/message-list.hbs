@@ -1,0 +1,12 @@
+<section class="message-list">
+	<span class="message-list__date">{{dayLabel}}</span>
+
+	{{#each messages}}
+		<message-item
+			type="{{type}}"
+			text="{{text}}"
+			time="{{time}}"
+			image-src="{{imageSrc}}">
+		</message-item>
+	{{/each}}
+</section>

@@ -1,0 +1,42 @@
+.side-bar {
+	height: 100%;
+	border-right: 1px solid #eaeaea;
+	display: flex;
+	flex-direction: column;
+	background: #fbfbfb;
+}
+
+.side-bar__top {
+	padding: 0.75rem 0.75rem 0.5rem;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.side-bar__profile-link {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.4rem;
+	color: #999999;
+	text-decoration: none;
+	font-size: 0.78rem;
+	margin-bottom: 0.75rem;
+}
+
+.side-bar__profile-link::after {
+	content: '›';
+	font-size: 1rem;
+}
+
+.side-bar__chat-list {
+	flex: 1;
+	min-height: 0;
+}
+
+@media (max-width: 900px) {
+	.side-bar {
+		border-right: none;
+		border-bottom: 1px solid #eaeaea;
+		max-height: 50vh;
+	}
+}

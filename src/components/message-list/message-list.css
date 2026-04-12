@@ -1,0 +1,12 @@
+.message-list {
+	overflow-y: auto;
+	padding: 0.95rem 1rem;
+}
+
+.message-list__date {
+	display: block;
+	text-align: center;
+	font-size: 0.72rem;
+	color: #9a9a9a;
+	margin-bottom: 0.9rem;
+}

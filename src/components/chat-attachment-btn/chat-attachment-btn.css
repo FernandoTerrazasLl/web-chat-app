@@ -1,0 +1,60 @@
+.chat-attachment-btn {
+	position: relative;
+}
+
+.chat-attachment-btn__trigger {
+	width: 26px;
+	height: 26px;
+	border: none;
+	background: transparent;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.chat-attachment-btn__trigger-icon {
+	width: 16px;
+	height: 16px;
+}
+
+.chat-attachment-btn__menu {
+	position: absolute;
+	left: 0;
+	bottom: calc(100% + 0.6rem);
+	width: 180px;
+	display: none;
+	flex-direction: column;
+	background: #ffffff;
+	border: 1px solid #ececec;
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	z-index: 20;
+}
+
+.chat-attachment-btn__menu--open {
+	display: flex;
+}
+
+.chat-attachment-btn__option {
+	border: none;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
+	padding: 0.7rem 0.75rem;
+	text-align: left;
+	font-size: 0.78rem;
+	cursor: pointer;
+}
+
+.chat-attachment-btn__option:hover {
+	background: #f7f9ff;
+}
+
+.chat-attachment-btn__option-icon {
+	width: 16px;
+	height: 16px;
+}

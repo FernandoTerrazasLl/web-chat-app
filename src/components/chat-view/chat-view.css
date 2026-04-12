@@ -1,0 +1,40 @@
+.chat-view {
+	height: 100%;
+	display: grid;
+	grid-template-rows: 56px 1fr auto;
+	min-height: 100vh;
+	background: #ffffff;
+}
+
+.chat-view--empty {
+	grid-template-rows: 1fr;
+}
+
+.chat-view__empty {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	color: #999999;
+}
+
+.chat-view__empty-icon {
+	width: 56px;
+	height: 56px;
+}
+
+.chat-view__empty-text {
+	margin: 0;
+}
+
+@media (max-width: 900px) {
+	.chat-view {
+		min-height: 50vh;
+	}
+
+	.chat-view__empty {
+		min-height: 45vh;
+	}
+}

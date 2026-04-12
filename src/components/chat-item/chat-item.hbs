@@ -1,0 +1,14 @@
+<article class="chat-item {{selectedClass}}" role="button" tabindex="0">
+    <img src="{{profileSrc}}" alt="{{profileAlt}}" class="chat-item__profile-image">
+    <div class="chat-item__sender-info">
+        <h3 class="chat-item__chat-name">{{chatName}}</h3>
+        <span class="chat-item__chat-message">{{lastSender}}{{lastMessage}}</span>
+    </div>
+
+    <div class="chat-item_unread-time">
+        <span class="chat-item__message-time">{{lastMessageTime}}</span>
+        {{#if showUnread}}
+            <span class="chat-item__unread-count">{{countMessagesUnread}}</span>
+        {{/if}}
+    </div>
+</article>

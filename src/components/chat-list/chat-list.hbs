@@ -1,0 +1,19 @@
+<section class="chat-list">
+	{{#if chats.length}}
+		{{#each chats}}
+			<chat-item
+				chat-id="{{id}}"
+				profile-src="{{profileSrc}}"
+				profile-alt="{{profileAlt}}"
+				chat-name="{{chatName}}"
+				last-sender="{{lastSender}}"
+				last-message="{{lastMessage}}"
+				last-message-time="{{lastMessageTime}}"
+				count-messages-unread="{{countMessagesUnread}}"
+				is-selected="{{isSelected}}">
+			</chat-item>
+		{{/each}}
+	{{else}}
+		<p class="chat-list__empty">No se encontraron chats.</p>
+	{{/if}}
+</section>

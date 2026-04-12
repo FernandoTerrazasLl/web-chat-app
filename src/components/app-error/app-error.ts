@@ -1,6 +1,7 @@
 import Handlebars from "handlebars";
-import templateSource from "../../partials/app-error.hbs?raw";
+import templateSource from "./app-error.hbs?raw";
 import cssText from "./app-error.css?raw";
+import { Block } from "../block.ts";
 
 const template = Handlebars.compile(templateSource);
 
@@ -10,19 +11,9 @@ type AppErrorConfig = {
     buttonText: string;
 }
 
-class AppError extends HTMLElement {
-    shadow: ShadowRoot;
+class AppError extends Block {
 
-    constructor() {
-        super();
-        this.shadow = this.attachShadow({ mode: "open" });
-    }
-
-    connectedCallback() {
-        this.render();
-    }
-
-    private render() {
+    protected render() {
         const config: AppErrorConfig = {
             title: this.getAttribute('title') || 'Error',
             message: this.getAttribute('message') || 'Ocurrió un error.',

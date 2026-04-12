@@ -1,0 +1,23 @@
+{{#if hasActiveChat}}
+	<section class="chat-view">
+		<chat-header
+			profile-src="{{profileSrc}}"
+			profile-alt="{{profileAlt}}"
+			chat-name="{{chatName}}">
+		</chat-header>
+
+		<message-list
+			day-label="{{dayLabel}}"
+			messages='{{messages}}'>
+		</message-list>
+
+		<chat-input-bar></chat-input-bar>
+	</section>
+{{else}}
+	<section class="chat-view chat-view--empty">
+		<article class="chat-view__empty">
+			<img src="{{emptyIconSrc}}" alt="Seleccionar chat" class="chat-view__empty-icon">
+			<p class="chat-view__empty-text">{{emptyText}}</p>
+		</article>
+	</section>
+{{/if}}

@@ -1,4 +1,4 @@
-import templateSource from '../../partials/error404-page.hbs?raw';
+import templateSource from './error404.hbs?raw';
 import cssText from './error404.css?raw';
 import Handlebars from 'handlebars';
 import '../../components/app-error/app-error.ts';

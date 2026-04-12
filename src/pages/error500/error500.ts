@@ -1,4 +1,4 @@
-import templateSource from '../../partials/error500-page.hbs?raw';
+import templateSource from './error500.hbs?raw';
 import cssText from './error500.css?raw';
 import Handlebars from 'handlebars';
 import '../../components/app-error/app-error.ts';

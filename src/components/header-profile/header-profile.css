@@ -1,0 +1,20 @@
+.header-profile {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.header-profile__image {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	object-fit: cover;
+	background: #e5e5e5;
+}
+
+.header-profile__name {
+	margin: 0;
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: #1e1e1e;
+}

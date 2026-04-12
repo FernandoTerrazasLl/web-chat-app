@@ -1,4 +1,4 @@
-import templateSource from '../../partials/login-page.hbs?raw';
+import templateSource from './login.hbs?raw';
 import cssText from './login.css?raw';
 import Handlebars from 'handlebars';
 import '../../components/app-form/app-form.ts';

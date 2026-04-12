@@ -1,9 +1,11 @@
-const routes: Record<string, string> ={
+const routes: Record<string, string> = {
     "/": "login-page",
     "/login": "login-page",
     "/register": "register-page",
     "/error500": "error500-page",
     "/error404": "error404-page",
+    "/chat": "chat-page",
+    "/profile": "profile-page"
 };
 
 export const Router = {
@@ -19,7 +21,7 @@ export const Router = {
         return null;
     },
 
-    go: (route: string, addToHistory = true) =>{
+    go: (route: string, addToHistory = true) => {
         const routeString = Router.routes[route] ? route : "/";
 
         if (addToHistory) {
@@ -41,7 +43,7 @@ export const Router = {
         window.scrollTo(0, 0);
     },
 
-    init:  () =>{
+    init: () => {
         document.addEventListener("click", (event) => {
             const anchor = Router.getAnchorFromEvent(event);
             if (!anchor) return;

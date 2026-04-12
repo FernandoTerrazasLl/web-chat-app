@@ -1,0 +1,13 @@
+<article class="message-item {{typeClass}}">
+	<div class="message-item__bubble">
+		{{#if text}}
+			<p class="message-item__text">{{text}}</p>
+		{{/if}}
+
+		{{#if showImage}}
+			<img src="{{imageSrc}}" alt="Adjunto" class="message-item__image">
+		{{/if}}
+
+		<span class="message-item__time">{{time}}</span>
+	</div>
+</article>

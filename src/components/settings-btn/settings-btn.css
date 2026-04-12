@@ -1,0 +1,60 @@
+.settings-btn {
+	position: relative;
+}
+
+.settings-btn__trigger {
+	width: 28px;
+	height: 28px;
+	border: none;
+	background: transparent;
+	border-radius: 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.settings-btn__icon {
+	width: 16px;
+	height: 16px;
+}
+
+.settings-btn__menu {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 170px;
+	display: none;
+	flex-direction: column;
+	background: #ffffff;
+	border: 1px solid #ececec;
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+	overflow: hidden;
+	z-index: 20;
+}
+
+.settings-btn__menu--open {
+	display: flex;
+}
+
+.settings-btn__menu-item {
+	border: none;
+	background: transparent;
+	padding: 0.75rem;
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
+	font-size: 0.78rem;
+	cursor: pointer;
+	text-align: left;
+}
+
+.settings-btn__menu-item:hover {
+	background: #f7f9ff;
+}
+
+.settings-btn__menu-icon {
+	width: 16px;
+	height: 16px;
+}

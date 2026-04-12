@@ -1,4 +1,4 @@
-import templateSource from '../../partials/register-page.hbs?raw';
+import templateSource from './register.hbs?raw';
 import cssText from './register.css?raw';
 import Handlebars from 'handlebars';
 import '../../components/app-form/app-form.ts';
